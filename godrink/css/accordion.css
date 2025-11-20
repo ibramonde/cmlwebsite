@@ -1,0 +1,106 @@
+
+.panels {
+  display: flex;
+  min-width: 80vw;
+}
+
+.panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 5%;
+  position: relative;
+  height: 50vh;
+  margin: 0 5px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  opacity: .8; 
+  transition: all 600ms ease-in-out;
+  overflow: hidden;
+}
+
+
+
+.panel.active {
+  flex: 5;
+  opacity: 1;
+}
+
+.panel h1 {
+  position: relative;
+  right: 20px;
+  font: 700 30px 'Nunito', sans-serif;
+  color: #fff;
+  opacity: 0;
+  filter: blur(4px);
+}
+
+.panel.active h1 {
+  opacity: 1;
+  right: 0;
+  filter: blur(0);
+  transition: all 350ms cubic-bezier(0.3, 0.7, 0.1, 1.6);
+  transition-delay: 600ms;
+}
+.panel::before {
+    content: '';
+    position: absolute;
+    bottom: 14px;
+    left: -90px;
+    width: 360px;
+    height: 130px;
+    transform: rotate(-50deg); 
+    opacity: 0.5;
+    z-index: 0; 
+}
+
+/*  Background images  */
+
+.panel:nth-child(1) {
+  background:#fff;
+}
+.panel:nth-child(1)::before {
+    background: url('../img/go_white.png') no-repeat center bottom;
+    background-size: 50%;
+}
+
+
+.panel:nth-child(2) {
+  background:#4b2f93;
+}
+.panel:nth-child(2)::before {
+    background: url('../img/go_pink.png') no-repeat center bottom;
+    background-size: 50%;
+}
+
+.panel:nth-child(3) {
+  background:#03ce00;
+}
+.panel:nth-child(3)::before {
+    background: url('../img/go_green.png') no-repeat center bottom;
+    background-size: 50%;
+}
+
+.panel:nth-child(4) {
+  background:#201c66;
+}
+.panel:nth-child(4)::before {
+    background: url('../img/go_blue.png') no-repeat center bottom;
+    background-size: 50%;
+}
+
+.panel:nth-child(5) {
+  background:#fc9244;
+}
+.panel:nth-child(5)::before {
+    background: url('../img/go_orange.png') no-repeat center bottom;
+    background-size: 50%;
+}
+
+@media screen and (min-width: 1100px) {
+  .panel h1 {
+    font-size: 48px;
+  }
+}
