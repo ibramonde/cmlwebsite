@@ -45,3 +45,5 @@ function detect(slide) {
 const init = () => slides.forEach(detect);
 
 window.addEventListener('load',init,false);
+
+

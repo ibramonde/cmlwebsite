@@ -114,6 +114,14 @@ main { position: relative; }
   &.content_6  { background-color: #dfdfdf; color: black; }
   
 }
+.slide .can_page {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    width: 150px;
+    z-index: 1;
+    rotate: 20deg;
+  }
 
 .indicator {
   position: absolute;
@@ -370,6 +378,7 @@ main { position: relative; }
     opacity: 0.5;
     z-index: 0; 
 }
+
 
 /*  Background images  */
 
