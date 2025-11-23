@@ -16449,6 +16449,9 @@ textarea.form-control-lg {
 .header.fixed-header {
   padding: 20px 0;
   background-color: #fff;
+  box-shadow: 1px 5px 18px 0px rgba(0,0,0,0.37);
+-webkit-box-shadow: 1px 5px 18px 0px rgba(0,0,0,0.37);
+-moz-box-shadow: 1px 5px 18px 0px rgba(0,0,0,0.37);
 }
 .header.fixed-header .logo .logo-dark {
   display: block;
@@ -16503,6 +16506,60 @@ textarea.form-control-lg {
     min-height: 550px;
   }
 }
+
+.section_warrapper {
+  position: relative;
+}
+.section_warrapper::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translate(0, 90px);
+  width: 180px;
+  height: 380px;
+  z-index: 0;
+  background:url('../images/backgrounds/eclatv_noir.png') no-repeat center center;
+  rotate:90deg;
+}
+@media (max-width: 991.98px) {
+  .section_warrapper::before {
+    display: none;
+}
+}
+.section_warrapper.yellow::before {
+    top: 10px;
+    left: auto;
+    right: 0;
+    transform: inherit;
+    background: url('../images/backgrounds/eclatv_jaune.png') no-repeat center center;
+    rotate: 180deg;
+}
+
+
+.section_warrapper.violet::before {
+    top: auto;
+    left: 35px;
+    bottom: -100px;
+    transform: inherit;
+    background: url('../images/backgrounds/eclatv_violet.png') no-repeat center center;
+    rotate: 270deg;
+}
+
+.section_warrapper.bleu::before {
+    top: auto;
+    left: 0;
+    bottom: 10px;
+    transform: inherit;
+    background: url('../images/backgrounds/eclatv_bleu.png') no-repeat center center;
+    rotate: 0deg;
+}
+
+.section_warrapper.orange::before {
+    background: url('../images/backgrounds/eclatv_orange.png') no-repeat center center;
+  
+}
+
 
 .animate-spin {
   animation: spin 1s linear infinite;
